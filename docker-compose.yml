@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  postgres:
+    image: postgres:15.1
+    restart: always
+    environment:
+      - POSTGRES_USER=sammy
+      - POSTGRES_PASSWORD=your_password
+    ports:
+      - "5432:5432"
+  mailhog:
+    image: mailhog/mailhog
+    ports:
+      - "8025:8025"
+      - "1025:1025"
+    restart: always

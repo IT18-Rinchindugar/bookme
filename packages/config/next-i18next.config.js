@@ -10,6 +10,7 @@ const config = {
       "da",
       "de",
       "en",
+      "mn",
       // "es-419", // Disabled until Crowdin reaches at least 80% completion
       "es",
       "fr",

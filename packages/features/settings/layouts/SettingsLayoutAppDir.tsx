@@ -45,24 +45,24 @@ const tabs: VerticalTabItemProps[] = [
       { name: "2fa_auth", href: "/settings/security/two-factor-auth" },
     ],
   },
-  {
-    name: "billing",
-    href: "/settings/billing",
-    icon: "credit-card",
-    children: [{ name: "manage_billing", href: "/settings/billing" }],
-  },
-  {
-    name: "developer",
-    href: "/settings/developer",
-    icon: "terminal",
-    children: [
-      //
-      { name: "webhooks", href: "/settings/developer/webhooks" },
-      { name: "api_keys", href: "/settings/developer/api-keys" },
-      // TODO: Add profile level for embeds
-      // { name: "embeds", href: "/v2/settings/developer/embeds" },
-    ],
-  },
+  // {
+  //   name: "billing",
+  //   href: "/settings/billing",
+  //   icon: "credit-card",
+  //   children: [{ name: "manage_billing", href: "/settings/billing" }],
+  // },
+  // {
+  //   name: "developer",
+  //   href: "/settings/developer",
+  //   icon: "terminal",
+  //   children: [
+  //     //
+  //     { name: "webhooks", href: "/settings/developer/webhooks" },
+  //     { name: "api_keys", href: "/settings/developer/api-keys" },
+  //     // TODO: Add profile level for embeds
+  //     // { name: "embeds", href: "/v2/settings/developer/embeds" },
+  //   ],
+  // },
   {
     name: "organization",
     href: "/settings/organizations",
@@ -83,10 +83,10 @@ const tabs: VerticalTabItemProps[] = [
         name: "appearance",
         href: "/settings/organizations/appearance",
       },
-      {
-        name: "billing",
-        href: "/settings/organizations/billing",
-      },
+      // {
+      //   name: "billing",
+      //   href: "/settings/organizations/billing",
+      // }
     ],
   },
   {
@@ -433,12 +433,12 @@ const SettingsSidebarContainer = ({
                                     {/* Hide if there is a parent ID */}
                                     {!team.parentId ? (
                                       <>
-                                        <VerticalTabItem
+                                        {/* <VerticalTabItem
                                           name={t("billing")}
                                           href={`/settings/teams/${team.id}/billing`}
                                           textClassNames="px-3 text-emphasis font-medium text-sm"
                                           disableChevron
-                                        />
+                                        /> */}
                                         {HOSTED_CAL_FEATURES && (
                                           <VerticalTabItem
                                             name={t("saml_config")}

@@ -22,15 +22,15 @@ export const WEBAPP_URL_FOR_OAUTH = IS_PRODUCTION || IS_DEV ? WEBAPP_URL : "http
 
 /** @deprecated use `WEBAPP_URL` */
 export const BASE_URL = WEBAPP_URL;
-export const WEBSITE_URL = process.env.NEXT_PUBLIC_WEBSITE_URL || "https://cal.com";
-export const APP_NAME = process.env.NEXT_PUBLIC_APP_NAME || "Cal.com";
-export const SUPPORT_MAIL_ADDRESS = process.env.NEXT_PUBLIC_SUPPORT_MAIL_ADDRESS || "help@cal.com";
-export const COMPANY_NAME = process.env.NEXT_PUBLIC_COMPANY_NAME || "Cal.com, Inc.";
-export const SENDER_ID = process.env.NEXT_PUBLIC_SENDER_ID || "Cal";
-export const SENDER_NAME = process.env.NEXT_PUBLIC_SENDGRID_SENDER_NAME || "Cal.com";
+export const WEBSITE_URL = process.env.NEXT_PUBLIC_WEBSITE_URL || "https://bookme.mn";
+export const APP_NAME = process.env.NEXT_PUBLIC_APP_NAME || "Bookme.mn";
+export const SUPPORT_MAIL_ADDRESS = process.env.NEXT_PUBLIC_SUPPORT_MAIL_ADDRESS || "help@bookme.mn";
+export const COMPANY_NAME = process.env.NEXT_PUBLIC_COMPANY_NAME || "Bookme.mn, Inc.";
+export const SENDER_ID = process.env.NEXT_PUBLIC_SENDER_ID || "Bookme";
+export const SENDER_NAME = process.env.NEXT_PUBLIC_SENDGRID_SENDER_NAME || "Bookme.mn";
 
 // This is the URL from which all Cal Links and their assets are served.
-// Use website URL to make links shorter(cal.com and not app.cal.com)
+// Use website URL to make links shorter(bookme.mn and not app.bookme.mn)
 // As website isn't setup for preview environments, use the webapp url instead
 // If it's a .vercel.app domain, keep it.
 // Else use the website url if defined and finally fallback to the webapp url
@@ -40,20 +40,20 @@ export const CAL_URL = new URL(WEBAPP_URL).hostname.endsWith(".vercel.app")
 
 export const IS_CALCOM =
   WEBAPP_URL &&
-  (new URL(WEBAPP_URL).hostname.endsWith("cal.com") ||
-    new URL(WEBAPP_URL).hostname.endsWith("cal.dev") ||
-    new URL(WEBAPP_URL).hostname.endsWith("cal.qa") ||
-    new URL(WEBAPP_URL).hostname.endsWith("cal-staging.com"));
+  (new URL(WEBAPP_URL).hostname.endsWith("bookme.mn") ||
+    new URL(WEBAPP_URL).hostname.endsWith("bookme.dev") ||
+    new URL(WEBAPP_URL).hostname.endsWith("bookme.qa") ||
+    new URL(WEBAPP_URL).hostname.endsWith("bookme-staging.com"));
 
 export const CONSOLE_URL =
-  new URL(WEBAPP_URL).hostname.endsWith(".cal.dev") ||
-  new URL(WEBAPP_URL).hostname.endsWith(".cal.qa") ||
-  new URL(WEBAPP_URL).hostname.endsWith(".cal-staging.com") ||
+  new URL(WEBAPP_URL).hostname.endsWith(".bookme.dev") ||
+  new URL(WEBAPP_URL).hostname.endsWith(".bookme.qa") ||
+  new URL(WEBAPP_URL).hostname.endsWith(".bookme-staging.com") ||
   process.env.NODE_ENV !== "production"
-    ? `https://console.cal.dev`
-    : `https://console.cal.com`;
+    ? `https://console.bookme.dev`
+    : `https://console.bookme.mn`;
 export const IS_SELF_HOSTED = !(
-  new URL(WEBAPP_URL).hostname.endsWith(".cal.dev") || new URL(WEBAPP_URL).hostname.endsWith(".cal.com")
+  new URL(WEBAPP_URL).hostname.endsWith(".bookme.dev") || new URL(WEBAPP_URL).hostname.endsWith(".bookme.mn")
 );
 export const EMBED_LIB_URL = process.env.NEXT_PUBLIC_EMBED_LIB_URL || `${WEBAPP_URL}/embed/embed.js`;
 export const TRIAL_LIMIT_DAYS = 14;
@@ -71,12 +71,12 @@ export const APPLE_TOUCH_ICON = "/apple-touch-icon.png";
 export const MSTILE_ICON = "/mstile-150x150.png";
 export const ANDROID_CHROME_ICON_192 = "/android-chrome-192x192.png";
 export const ANDROID_CHROME_ICON_256 = "/android-chrome-256x256.png";
-export const ROADMAP = "https://cal.com/roadmap";
-export const DESKTOP_APP_LINK = "https://cal.com/download";
-export const JOIN_DISCORD = "https://discord.gg/XjCRtTnV";
+export const ROADMAP = "https://bookme.mn/roadmap";
+export const DESKTOP_APP_LINK = "https://bookme.mn/download";
+export const JOIN_DISCORD = "https://discord.gg/ytJSTftm";
 export const POWERED_BY_URL = `${WEBSITE_URL}/?utm_source=embed&utm_medium=powered-by-button`;
-export const DOCS_URL = "https://cal.com/docs";
-export const DEVELOPER_DOCS = "https://developer.cal.com";
+export const DOCS_URL = "https://bookme.mn/docs";
+export const DEVELOPER_DOCS = "https://developer.bookme.mn";
 export const SEO_IMG_DEFAULT = `${CAL_URL}/og-image.png`;
 // The Dynamic OG Image is passed through Next's Image API to further optimize it.
 // This results in a 80% smaller image 🤯. It is however important that for the query

@@ -46,6 +46,7 @@ const tabs: VerticalTabItemProps[] = [
       { name: "2fa_auth", href: "/settings/security/two-factor-auth" },
     ],
   },
+<<<<<<< HEAD
   {
     name: "billing",
     href: "/settings/billing",
@@ -65,6 +66,28 @@ const tabs: VerticalTabItemProps[] = [
       // { name: "embeds", href: "/v2/settings/developer/embeds" },
     ],
   },
+=======
+  // {
+  //   name: "billing",
+  //   href: "/settings/billing",
+  //   icon: "credit-card",
+  //   children: [{ name: "manage_billing", href: "/settings/billing" }],
+  // },
+  // {
+  //   name: "developer",
+  //   href: "/settings/developer",
+  //   icon: "terminal",
+  //   children: [
+  //     //
+  //     { name: "webhooks", href: "/settings/developer/webhooks" },
+  //     { name: "api_keys", href: "/settings/developer/api-keys" },
+  //     // TODO: hide this if they have an organisation
+  //     { name: "admin_api", href: "/settings/organizations/admin-api" },
+  //     // TODO: Add profile level for embeds
+  //     // { name: "embeds", href: "/v2/settings/developer/embeds" },
+  //   ],
+  // },
+>>>>>>> bae51a2725 (refactor: 💡 changes the settings layout)
   {
     name: "organization",
     href: "/settings/organizations",
@@ -82,9 +105,19 @@ const tabs: VerticalTabItemProps[] = [
         href: "/settings/organizations/privacy",
       },
       {
+<<<<<<< HEAD
         name: "billing",
         href: "/settings/organizations/billing",
       },
+=======
+        name: "appearance",
+        href: "/settings/organizations/appearance",
+      },
+      // {
+      //   name: "billing",
+      //   href: "/settings/organizations/billing",
+      // },
+>>>>>>> bae51a2725 (refactor: 💡 changes the settings layout)
       { name: "OAuth Clients", href: "/settings/organizations/platform/oauth-clients" },
       {
         name: "SSO",
@@ -94,10 +127,10 @@ const tabs: VerticalTabItemProps[] = [
         name: "directory_sync",
         href: "/settings/organizations/dsync",
       },
-      {
-        name: "admin_api",
-        href: "https://cal.com/docs/enterprise-features/api/api-reference/bookings#admin-access",
-      },
+      // {
+      //   name: "admin_api",
+      //   href: "https://cal.com/docs/enterprise-features/api/api-reference/bookings#admin-access",
+      // },
     ],
   },
   {
@@ -362,7 +395,7 @@ const TeamListCollapsible = () => {
                         disableChevron
                       />
                       {/* Hide if there is a parent ID */}
-                      {!team.parentId ? (
+                      {/* {!team.parentId ? (
                         <>
                           <VerticalTabItem
                             name={t("billing")}
@@ -371,6 +404,7 @@ const TeamListCollapsible = () => {
                             disableChevron
                           />
                         </>
+<<<<<<< HEAD
                       ) : null}
                       <VerticalTabItem
                         name={t("booking_limits")}
@@ -378,6 +412,9 @@ const TeamListCollapsible = () => {
                         textClassNames="px-3 text-emphasis font-medium text-sm"
                         disableChevron
                       />
+=======
+                      ) : null} */}
+>>>>>>> bae51a2725 (refactor: 💡 changes the settings layout)
                     </>
                   )}
                 </CollapsibleContent>

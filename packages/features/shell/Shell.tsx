@@ -647,12 +647,12 @@ const navigation: NavigationItemType[] = [
     href: "/more",
     icon: "ellipsis",
   },
-  {
-    name: "Routing Forms",
-    href: "/apps/routing-forms/forms",
-    icon: "file-text",
-    isCurrent: ({ pathname }) => pathname?.startsWith("/apps/routing-forms/") ?? false,
-  },
+  // {
+  //   name: "Routing Forms",
+  //   href: "/apps/routing-forms/forms",
+  //   icon: "file-text",
+  //   isCurrent: ({ pathname }) => pathname?.startsWith("/apps/routing-forms/") ?? false,
+  // },
   {
     name: "workflows",
     href: "/workflows",

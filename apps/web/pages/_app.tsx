@@ -2,9 +2,11 @@ import type { IncomingMessage } from "http";
 import type { AppContextType } from "next/dist/shared/lib/utils";
 import React, { useEffect } from "react";
 
+import { IS_PRODUCTION } from "@calcom/lib/constants";
 import { trpc } from "@calcom/trpc/react";
 
 import type { AppProps } from "@lib/app-providers";
+import initializeLogRocket from "@lib/logrocket";
 
 import "../styles/globals.css";
 
@@ -15,6 +17,7 @@ function MyApp(props: AppProps) {
     if (typeof window !== "undefined" && "serviceWorker" in navigator) {
       navigator.serviceWorker.register("/service-worker.js");
     }
+    IS_PRODUCTION && initializeLogRocket();
   }, []);
 
   const content = Component.PageWrapper ? <Component.PageWrapper {...props} /> : <Component {...pageProps} />;

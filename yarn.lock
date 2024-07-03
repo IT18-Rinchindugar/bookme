@@ -4747,6 +4747,7 @@ __metadata:
     kbar: ^0.1.0-beta.36
     libphonenumber-js: ^1.10.51
     lodash: ^4.17.21
+    logrocket: ^8.1.0
     lottie-react: ^2.3.1
     markdown-it: ^13.0.1
     md5: ^2.3.0
@@ -29492,6 +29493,13 @@ __metadata:
     safe-stable-stringify: ^2.3.1
     triple-beam: ^1.3.0
   checksum: b9ea74bb75e55379ad0eb3e4d65ae6e8d02bc45b431c218162878bf663997ab9258a73104c2b30e09dd2db288bb83c8bf8748e46689d75f5e7e34cf69378d6df
+  languageName: node
+  linkType: hard
+
+"logrocket@npm:^8.1.0":
+  version: 8.1.0
+  resolution: "logrocket@npm:8.1.0"
+  checksum: 9925bae3ca61612c2e82964d23987ecd35ba43be19ac7b694d5296e2edf50eff69b3c97962e43f4f75df20ea36a3155a5d4842c77586e483ba355279a8d946a6
   languageName: node
   linkType: hard
 

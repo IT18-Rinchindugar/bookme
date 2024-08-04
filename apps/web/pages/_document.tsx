@@ -1,8 +1,10 @@
+/* eslint-disable turbo/no-undeclared-env-vars */
 import type { IncomingMessage } from "http";
 import { dir } from "i18next";
 import type { NextPageContext } from "next";
 import type { DocumentContext, DocumentProps } from "next/document";
 import Document, { Head, Html, Main, NextScript } from "next/document";
+import Script from "next/script";
 import { z } from "zod";
 
 import { IS_PRODUCTION } from "@calcom/lib/constants";
@@ -86,7 +88,21 @@ class MyDocument extends Document<Props> {
             />
           )}
         </Head>
+        <Script
+          strategy="lazyOnload"
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_MEASUREMENT_ID}`}
+        />
 
+        <Script id="" strategy="lazyOnload">
+          {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${process.env.NEXT_PUBLIC_MEASUREMENT_ID}', {
+              page_path: window.location.pathname,
+              });
+          `}
+        </Script>
         <body
           className="dark:bg-darkgray-50 bg-subtle antialiased"
           style={

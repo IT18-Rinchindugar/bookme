@@ -58,6 +58,7 @@ export const apiHandlers = {
   "pipedrive-crm": import("./pipedrive-crm/api"),
   plausible: import("./plausible/api"),
   posthog: import("./posthog/api"),
+  "qpay-payment": import("./qpay-payment/api"),
   qr_code: import("./qr_code/api"),
   raycast: import("./raycast/api"),
   "retell-ai": import("./retell-ai/api"),

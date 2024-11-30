@@ -4608,6 +4608,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@calcom/qpay-payment@workspace:packages/app-store/qpay-payment":
+  version: 0.0.0-use.local
+  resolution: "@calcom/qpay-payment@workspace:packages/app-store/qpay-payment"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
 "@calcom/qr_code@workspace:packages/app-store/qr_code":
   version: 0.0.0-use.local
   resolution: "@calcom/qr_code@workspace:packages/app-store/qr_code"

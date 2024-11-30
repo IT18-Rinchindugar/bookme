@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "private": true,
+  "name": "@calcom/qpay-payment",
+  "version": "0.0.0",
+  "main": "./index.ts",
+  "dependencies": {
+    "@calcom/lib": "*"
+  },
+  "devDependencies": {
+    "@calcom/types": "*"
+  },
+  "description": "Qpay is a widely used digital payment system in Mongolia that allows users to make quick and easy payments through QR codes."
+}
